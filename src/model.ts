@@ -131,18 +131,22 @@ export default class MediaPlayerObject {
   }
 
   get sources(): string[] {
+    console.log("MediaPlayerObject.sources() -> ", this._attr.source_list);
     return this._attr.source_list || [];
   }
 
   get source(): string {
+    console.log("MediaPlayerObject.source() -> ", this._attr.source);
     return this._attr.source || '';
   }
 
   get soundModes(): string[] {
+    console.log("MediaPlayerObject.soundModes() -> ", this._attr.sound_mode_list);
     return this._attr.sound_mode_list || [];
   }
 
   get soundMode(): string {
+    console.log("MediaPlayerObject.soundMode() -> ", this._attr.sound_mode);
     return this._attr.sound_mode || '';
   }
 
@@ -317,6 +321,7 @@ export default class MediaPlayerObject {
   }
 
   setSoundMode(e: Event, name: string): void {
+    console.log("MediaPlayerObject.setSoundMode() -> ", name);
     this.callService(e, 'select_sound_mode', { sound_mode: name });
   }
 
