@@ -32,6 +32,7 @@ export class MiniMediaPlayerSoundMenu extends LitElement {
   }
 
   render(): TemplateResult {
+    console.log("MiniMediaPlayerSoundMenu.render()");
     return html`
       <mmp-dropdown
         @change=${this.handleChange}
