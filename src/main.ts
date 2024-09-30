@@ -13,7 +13,6 @@ import {
 import { classMap } from 'lit-html/directives/class-map';
 import { styleMap } from 'lit-html/directives/style-map';
 import ResizeObserver from 'resize-observer-polyfill';
-
 import logging
 
 import { generateConfig } from './config/config';
