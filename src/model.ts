@@ -143,6 +143,7 @@ export default class MediaPlayerObject {
   }
 
   get soundMode(): string {
+    console.log("MediaPlayerObject.soundMode() -> ", this._attr.sound_mode || 'NON SET!');
     return this._attr.sound_mode || '';
   }
 
