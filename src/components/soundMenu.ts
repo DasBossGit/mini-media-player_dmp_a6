@@ -20,11 +20,12 @@ export class MiniMediaPlayerSoundMenu extends LitElement {
   @state() private selected?: string = undefined;
 
   get mode(): string {
+    console.log("MiniMediaPlayerSoundMenu.mode()");
     return this.player.soundMode;
   }
 
   get alternatives(): DropdownItem[] {
-    return this.player.soundModes.map((mode) => ({
+    return this.player.soundModes.map((mode) => (console.log("MiniMediaPlayerSoundMenu.alternatives()"), {
       name: mode,
       id: mode,
       type: 'soundMode',
@@ -45,12 +46,14 @@ export class MiniMediaPlayerSoundMenu extends LitElement {
   }
 
   private handleChange(ev: ChangeEvent) {
+    console.log("MiniMediaPlayerSoundMenu.handleChange()");
     const { id } = ev.detail;
     this.player.setSoundMode(ev, id);
     this.selected = id;
   }
 
   static get styles(): CSSResult {
+    console.log("MiniMediaPlayerSoundMenu.styles()");
     return css`
       :host {
         max-width: 120px;
